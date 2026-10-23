@@ -4,11 +4,11 @@ cask "debagr" do
 
   url "https://github.com/radeknovis/homebrew-debagr/releases/download/v#{version}/Debagr-#{version}.dmg"
   name "Debagr"
-  desc "Deploy signed iOS apps through a paired Mac and private VPN"
+  desc "Remote device deployment through a private VPN"
   homepage "https://github.com/radeknovis/homebrew-debagr"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Debagr.app"
   binary "#{appdir}/Debagr.app/Contents/MacOS/Debagr", target: "debagr"
