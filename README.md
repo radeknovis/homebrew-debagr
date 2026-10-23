@@ -62,3 +62,15 @@ and `brew audit --cask --strict`, then test install, replacement and uninstall.
 Publish only after the app's acceptance checks and the public download URL pass.
 Keep the previous versioned release available for rollback. The cask repository
 contains no signing keys, notary credentials, pairing records or app source history.
+
+## Acceptance recorded for 0.2.0
+
+- Homebrew style and strict audit passed.
+- Temporary-appdir install, reinstall and uninstall passed using the final DMG
+  through a local file URL. The pinned SHA-256 was enforced.
+- The installed app and CLI link passed JSON inventory, strict signature,
+  stapled-ticket and Gatekeeper checks after install and replacement.
+- The temporary cask, CLI link, trust entry and tap were removed after testing.
+- Authenticated download of the private draft DMG matched the local SHA-256.
+- Anonymous public fetching, version-to-version upgrade, clean-Mac first launch
+  and fresh remote-device acceptance remain open.
