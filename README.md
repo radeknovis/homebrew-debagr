@@ -4,11 +4,14 @@ Publisher-owned Homebrew cask and binary release channel for Debagr, a native
 macOS menu-bar app and JSON CLI for deploying signed iOS apps through their
 paired Mac over a private VPN.
 
-**Prepared technical preview: 0.2.0. This repository and its release remain
-private drafts pending installation/hardware acceptance and publication review.**
-The application source remains in a separate private repository.
+**Technical preview 0.2.0 for Apple silicon.**
+[Website](https://radeknovis.github.io/debagr-site/) ·
+[Release and downloads](https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.2.0) ·
+[Privacy, terms and support](https://radeknovis.github.io/debagr-site/legal.html).
+The application source is not public; this repository holds the cask and
+release binaries only.
 
-## Installation after publication
+## Installation
 
 ```sh
 brew install --cask radeknovis/debagr/debagr
@@ -49,9 +52,18 @@ receipts. Remove retained data only after reviewing it and making a backup.
 
 ## Direct download
 
-After publication, download `Debagr-0.2.0.dmg` and its matching `.sha256` from
-this repository's Releases. Source-code ZIPs contain the cask definition, not
+Download `Debagr-0.2.0.dmg` and its matching `.sha256` from the
+[0.2.0 release](https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.2.0). Source-code ZIPs contain the cask definition, not
 the application. Verify the checksum, mount the DMG and drag Debagr to Applications.
+
+## Support and security
+
+Report problems in [Issues](https://github.com/radeknovis/homebrew-debagr/issues)
+with the exact macOS, Xcode and iOS versions. Never post device identifiers,
+hostnames, VPN addresses, pairing material or diagnostics in a public issue.
+Send vulnerabilities, privacy requests and requested diagnostics through
+[private vulnerability reporting](https://github.com/radeknovis/homebrew-debagr/security/advisories/new).
+Support is best effort during the technical preview. See [SECURITY.md](SECURITY.md).
 
 ## Maintaining the cask
 

@@ -5,7 +5,7 @@ cask "debagr" do
   url "https://github.com/radeknovis/homebrew-debagr/releases/download/v#{version}/Debagr-#{version}.dmg"
   name "Debagr"
   desc "Remote device deployment through a private VPN"
-  homepage "https://github.com/radeknovis/homebrew-debagr"
+  homepage "https://radeknovis.github.io/debagr-site/"
 
   depends_on arch: :arm64
   depends_on macos: :tahoe
