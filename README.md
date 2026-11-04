@@ -84,5 +84,12 @@ contains no signing keys, notary credentials, pairing records or app source hist
   stapled-ticket and Gatekeeper checks after install and replacement.
 - The temporary cask, CLI link, trust entry and tap were removed after testing.
 - Authenticated download of the private draft DMG matched the local SHA-256.
-- Anonymous public fetching, version-to-version upgrade, clean-Mac first launch
-  and fresh remote-device acceptance remain open.
+- After publication on 4 November 2026, an anonymous download of the release DMG
+  matched its SHA-256, and `brew install --cask` from the public tap passed the
+  same signature, ticket, Gatekeeper and JSON checks before uninstall and untap.
+- `brew audit --cask --strict --online` reports two expected findings: the
+  release is a GitHub prerelease, and the cask's macOS 26 requirement is
+  deliberately above the app's macOS 13 minimum because remote deployment
+  needs macOS 26.
+- Version-to-version upgrade, clean-Mac first launch and fresh remote-device
+  acceptance remain open.
