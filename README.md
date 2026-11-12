@@ -4,9 +4,9 @@ Publisher-owned Homebrew cask and binary release channel for Debagr, a native
 macOS menu-bar app and JSON CLI for deploying signed iOS apps through their
 paired Mac over a private VPN.
 
-**Technical preview 0.2.0 for Apple silicon.**
+**Technical preview 0.3.0 for Apple silicon.**
 [Website](https://radeknovis.github.io/debagr-site/) ·
-[Release and downloads](https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.2.0) ·
+[Release and downloads](https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.3.0) ·
 [Privacy, terms and support](https://radeknovis.github.io/debagr-site/legal.html).
 The application source is not public; this repository holds the cask and
 release binaries only.
@@ -34,7 +34,7 @@ debagr --devices --json
 
 The deployment skill is included at
 `/Applications/Debagr.app/Contents/Resources/Skills/debagr-deploy/SKILL.md`.
-Use the app's Agent tools to copy the prompt and reveal the skill folder.
+Use the app's Agent tools for installation instructions.
 
 ## Update and uninstall
 
@@ -52,8 +52,8 @@ receipts. Remove retained data only after reviewing it and making a backup.
 
 ## Direct download
 
-Download `Debagr-0.2.0.dmg` and its matching `.sha256` from the
-[0.2.0 release](https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.2.0). Source-code ZIPs contain the cask definition, not
+Download `Debagr-0.3.0.dmg` and its matching `.sha256` from the
+[0.3.0 release](https://github.com/radeknovis/homebrew-debagr/releases/tag/v0.3.0). Source-code ZIPs contain the cask definition, not
 the application. Verify the checksum, mount the DMG and drag Debagr to Applications.
 
 ## Support and security
@@ -74,6 +74,12 @@ and `brew audit --cask --strict`, then test install, replacement and uninstall.
 Publish only after the app's acceptance checks and the public download URL pass.
 Keep the previous versioned release available for rollback. The cask repository
 contains no signing keys, notary credentials, pairing records or app source history.
+
+## 0.3.0 verification and network behaviour
+
+One remote iPhone install and launch over Tailscale was verified with a pre-release build. Clean and offline first launch, iPad, recovery, other VPNs, macOS 13–15, the 0.2.0 upgrade, USB/IP, VirtualHere and two-Mac linking remain unverified. USB setup is experimental and requires separately installed tools; USB/IP requires SIP off on the Builder.
+
+Peer discovery (TCP 49388) and role sync (TCP 49389) run while Initial device pairing is open or a Builder or Client role is saved. Discovery is unauthenticated; see the release notes for disclosed fields and pairing requirements.
 
 ## Acceptance recorded for 0.2.0
 

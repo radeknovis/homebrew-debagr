@@ -17,7 +17,7 @@ Responses are best effort; the preview has no guaranteed response time.
 
 ## Remote access boundary
 
-Debagr opens no deployment network listener. Remote invocation relies on the
+In 0.3.0, peer discovery on TCP 49388 and role sync on TCP 49389 run while Initial device pairing is open or a Builder or Client role is saved. Discovery replies are unauthenticated; see the release notes for their contents and pairing requirements. Remote deployment invocation relies on the
 build Mac's SSH configuration: anyone who can run Debagr through SSH acts with
 that macOS account's device-development privileges. Use public-key SSH,
 least-privilege accounts and a private network such as Tailscale. Never expose
